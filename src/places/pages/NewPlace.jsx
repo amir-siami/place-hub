@@ -37,7 +37,7 @@ function NewPlace() {
         isValid: false,
       },
       image: {
-        value: null,
+        value: "https://picsum.photos/536/354",
         isValid: false,
       },
     },
@@ -97,11 +97,11 @@ function NewPlace() {
           errorText="Please enter a valid address."
           onInput={handleInput}
         />
-        {/* <ImageUploader
+        <ImageUploader
           id="image"
           onInput={handleInput}
           errorText="Please provide an image."
-        /> */}
+        />
         <Button type="submit" disabled={!state.isValid}>
           ADD PLACE
         </Button>
