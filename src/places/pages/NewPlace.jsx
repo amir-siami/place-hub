@@ -37,7 +37,7 @@ function NewPlace() {
         isValid: false,
       },
       image: {
-        value: "https://picsum.photos/536/354",
+        value: null,
         isValid: false,
       },
     },
