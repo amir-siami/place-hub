@@ -85,8 +85,7 @@ function PlaceItem(props) {
           {isLoading && <LoadingSpinner asOverlay />}
           <div className="place-item__image">
             <img
-              // src={`${process.env.REACT_APP_ASSET_URL}/${props.image}`}
-              src="https://picsum.photos/536/354"
+              src={`${process.env.REACT_APP_ASSET_URL}/${props.image}`}
               alt={props.title}
             />
           </div>
