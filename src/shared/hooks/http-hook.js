@@ -18,7 +18,13 @@ export const useHttpClient = () => {
           headers,
           signal: httpAbortCtrl.signal,
         });
-        const responseData = await response.json();
+        // const responseData = await response.json();
+
+        // Log the raw response text
+        const responseText = await response.text();
+        console.log("Raw response:", responseText);
+
+        const responseData = JSON.parse(responseText);
 
         activeHttpRequests.current = activeHttpRequests.current.filter(
           (reqCtrl) => reqCtrl !== httpAbortCtrl
